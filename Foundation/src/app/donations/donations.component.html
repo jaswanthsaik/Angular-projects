@@ -1,0 +1,21 @@
+<app-header></app-header>
+<app-aside></app-aside>
+<div class="donations">
+  <h1>Donors</h1>
+  
+  <div class="donors-list">
+    <div class="donor" *ngFor="let donor of donors">
+      <div class="donor-name">{{ donor.name }}</div>
+      <div class="donation-amount">${{ donor.amount }}</div>
+    </div>
+  </div>
+  
+  <div class="total-amount-card">
+    <div class="total-amount-box" [ngClass]="{'highlight': totalAmount >= 10000}">
+      Total Donation
+      <div class="amount">${{ totalAmount }}</div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

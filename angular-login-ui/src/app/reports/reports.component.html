@@ -1,0 +1,17 @@
+<app-header></app-header>
+<app-side-menu></app-side-menu>
+<div class="reports">
+  <h2 class="reports-title">Attendance Report</h2>
+  <div class="absent-report">
+    <h3>Select attendance:</h3>
+    <label>
+      <input type="radio" name="attendance" value="present" [(ngModel)]="attendance"> Present
+    </label>
+    <label>
+      <input type="radio" name="attendance" value="absent" [(ngModel)]="attendance"> Absent
+    </label>
+  </div>
+  <button class="submit-button" (click)="submitAttendance()">Submit</button>
+  <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+</div>
+<app-footer></app-footer>

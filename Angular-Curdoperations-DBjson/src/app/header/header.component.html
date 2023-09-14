@@ -1,0 +1,10 @@
+<header>
+  <h1>My Angular CRUD App</h1>
+  <button (click)="openForm()">Add Details</button>
+</header>
+<div class="overlay" *ngIf="showForm">
+  <div class="popup">
+    <button class="close-button" (click)="closeForm()">&times;</button>
+    <app-popup-form (formSubmitted)="submitForm($event)"></app-popup-form>
+  </div>
+</div>

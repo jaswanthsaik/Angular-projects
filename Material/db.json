@@ -1,0 +1,77 @@
+{
+  "productList": [
+    {
+      "ProductName": "Apple",
+      "Category": "Fruits",
+      "Date": "2023-06-07T18:30:00.000Z",
+      "Freshness": "Using chemicals",
+      "Price": 50,
+      "Comments": "fresh fruits",
+      "id": 1
+    },
+    {
+      "ProductName": "Carrot",
+      "Category": "Vegetables",
+      "Date": "2023-06-26T18:30:00.000Z",
+      "Freshness": "Using chemicals",
+      "Price": 20,
+      "Comments": "from market",
+      "id": 2
+    },
+    {
+      "ProductName": "Iqoo",
+      "Category": "Electronics",
+      "Date": "2023-06-15T18:30:00.000Z",
+      "Freshness": "Brand new",
+      "Price": 52000,
+      "Comments": "Perfect",
+      "id": 5
+    },
+    {
+      "ProductName": "beetroots",
+      "Category": "Vegetables",
+      "Date": "2023-06-13T18:30:00.000Z",
+      "Freshness": "Brand new",
+      "Price": 80,
+      "Comments": "good",
+      "id": 6
+    },
+    {
+      "ProductName": "hp",
+      "Category": "Electronics",
+      "Date": "2023-05-23T18:30:00.000Z",
+      "Freshness": "Second Hand",
+      "Price": 36000,
+      "Comments": "average",
+      "id": 7
+    },
+    {
+      "ProductName": "banana",
+      "Category": "Fruits",
+      "Date": "2023-04-12T18:30:00.000Z",
+      "Freshness": "Brand new",
+      "Price": 20,
+      "Comments": "ok",
+      "id": 8
+    },
+    {
+      "ProductName": "boat",
+      "Category": "Electronics",
+      "Date": "2023-01-11T18:30:00.000Z",
+      "Freshness": "Republish",
+      "Price": 1500,
+      "Comments": "excellent",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

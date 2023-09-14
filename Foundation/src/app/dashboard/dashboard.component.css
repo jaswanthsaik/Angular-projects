@@ -1,0 +1,68 @@
+.home h1 {
+    position: absolute;
+    left: 50%; 
+    top: 10%;
+    transform: translateX(-50%); 
+    font-size: 36px;
+    font-weight: bold;
+    color: #07bace;
+  }
+  /* .dashboard {
+    background-image: url('../../assets/dashboard.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } */
+.dashboard {
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: 50px;
+  }
+.dashboard2 {
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 200px;
+    margin-right: 50px;
+  }
+  
+  /* .dashboard-title {
+    color: #2d3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+  }
+   */
+  .dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .widget {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget-title {
+    color: #2980b9;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .widget-content {
+    color: #27ae60;
+    font-size: 18px;
+  }
+  

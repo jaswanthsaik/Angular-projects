@@ -1,0 +1,47 @@
+
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+.containers {
+  color: rgb(137, 137, 162);
+  font-size: 20px;
+  margin-bottom: 40px;
+
+}
+
+a:hover {
+  color: rgb(225, 121, 214);
+}
+
+
+
+aside {
+  background-color: #95deee;
+  width: 10%;
+  height: 100%;
+  position: fixed;
+  top: 75.5px;
+  left: 0;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.containers a {
+  color: #333;
+  text-decoration: none;
+  padding: 3px;
+}
+
+.containers a:hover {
+  /* color: #666; */
+  background-color: white;
+}
+
+.content {
+  margin-left: 220px; /* Adjust margin to accommodate side menu width */
+  padding: 20px;
+}

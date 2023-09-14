@@ -1,0 +1,39 @@
+.page-content {
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: chocolate;
+}
+
+.highlight-container {
+    background-color: #ffe6cc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.founder-details {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    margin-left: 260px;
+}
+
+.founder-info h2,
+.founder-info p {
+    font-size: 1.5rem;
+    color: crimson;
+}
+
+.founder-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}

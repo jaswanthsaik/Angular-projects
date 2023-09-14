@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "name": "sk.amzad",
+      "email": "amzad@123gmail.com",
+      "address": "nellore",
+      "phone": "123456789",
+      "dob": "2023-08-05",
+      "id": 2
+    },
+    {
+      "name": "Jashu",
+      "email": "jaswanthsai34569@gmail.com",
+      "address": "kovur",
+      "phone": "18568659545",
+      "dob": "2021-08-28",
+      "id": 3
+    },
+    {
+      "name": "ishu",
+      "email": "ishu123@gmail.com",
+      "address": "benguluru",
+      "phone": "324484545545",
+      "dob": "2023-07-05",
+      "id": 4
+    },
+    {
+      "name": "janu",
+      "email": "janu159@gmail.com",
+      "address": "nellore",
+      "phone": "454454554854",
+      "dob": "2023-07-12",
+      "id": 5
+    },
+    {
+      "name": "Jaswanth",
+      "email": "jaswanth459@gmail.com",
+      "address": "vizag",
+      "phone": "84584545675",
+      "dob": "2023-07-29",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

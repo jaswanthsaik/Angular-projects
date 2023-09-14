@@ -1,0 +1,33 @@
+.main-nav {
+
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.list-items {
+    justify-content: space-between;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.list-items li a {
+    text-decoration: none;
+    color: #949AA9;
+    font-weight: 300;
+    margin: 0 30px;
+}

@@ -1,0 +1,16 @@
+<app-header></app-header>
+<app-aside></app-aside>
+
+<div class="equipment">
+  <h1>Equipment</h1>
+  
+  <div class="equipment-list">
+    <div class="equipment-item" *ngFor="let equipment of equipmentList">
+      <img [src]="equipment.imageUrl" alt="{{ equipment.name }}">
+      <h2>{{ equipment.name }}</h2>
+      <!-- <p>{{ equipment.description }}</p> -->
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

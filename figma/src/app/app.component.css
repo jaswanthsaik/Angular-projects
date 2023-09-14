@@ -1,0 +1,429 @@
+.custom-heading {
+    position: absolute;
+    width: 123px;
+    height: 45px;
+    left: 275px;
+    top: 60px;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: #1B2442;
+}
+
+.box1 {
+    width: 840px;
+    height: 133px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-left: 255px;
+    margin-top: 70px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.box2 {
+    width: 840px;
+    height: 133px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-left: 255px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box3,
+.box4 {
+    width: 840px;
+    height: 133px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-left: 255px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.box1-1 {
+    width: 127px;
+    height: 103px;
+    background-color: #eceff8;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.box2-1 {
+    width: 127px;
+    height: 103px;
+    background-color: #f8ecf8;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.box3-1 {
+    width: 127px;
+    height: 103px;
+    background-color: #f8ecec;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.box4-1 {
+    width: 127px;
+    height: 103px;
+    background-color: #eef8ec;
+    border-radius: 15px;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.today {
+    position: absolute;
+    width: 62px;
+    height: 23px;
+    left: 33px;
+    top: 10px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: #2a324f;
+}
+
+.today2 {
+    position: absolute;
+    width: 88px;
+    height: 23px;
+    left: 17px;
+    top: 10px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: #2a324f;
+}
+
+.today3 {
+    position: absolute;
+    width: 88px;
+    height: 23px;
+    left: 17px;
+    top: 10px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: #2a324f;
+}
+
+.today4 {
+    position: absolute;
+    width: 88px;
+    height: 23px;
+    left: 17px;
+    top: 10px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+
+    color: #2a324f;
+}
+
+.time {
+    position: absolute;
+    width: 98px;
+    height: 45px;
+    left: 20px;
+    top: 20px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    color: #1B2442;
+
+}
+
+.time2 {
+    position: absolute;
+    width: 98px;
+    height: 45px;
+    left: 20px;
+    top: 20px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    color: #1B2442;
+
+}
+
+.time3 {
+    position: absolute;
+    width: 98px;
+    height: 45px;
+    left: 20px;
+    top: 20px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    color: #1B2442;
+
+}
+
+.time4 {
+    position: absolute;
+    width: 98px;
+    height: 45px;
+    left: 20px;
+    top: 20px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+
+    color: #1B2442;
+
+}
+
+.text1 {
+    position: absolute;
+    width: 455px;
+    height: 33px;
+    left: 179px;
+    top: 13px;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 33px;
+
+    color: #1B2442;
+}
+
+.text2-1 {
+    position: absolute;
+    width: 455px;
+    height: 33px;
+    left: 179px;
+    top: 13px;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 33px;
+
+    color: #1B2442;
+}
+
+.text3-1 {
+    position: absolute;
+    width: 455px;
+    height: 33px;
+    left: 179px;
+    top: 13px;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 33px;
+
+    color: #1B2442;
+}
+
+.text4-1 {
+    position: absolute;
+    width: 455px;
+    height: 33px;
+    left: 179px;
+    top: 13px;
+
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 33px;
+
+    color: #1B2442;
+}
+
+.text2 {
+    position: absolute;
+    width: 524px;
+    height: 46px;
+    left: 179px;
+    top: 60px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.text2-2 {
+    position: absolute;
+    width: 524px;
+    height: 46px;
+    left: 179px;
+    top: 60px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.5px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.text3-2 {
+    position: absolute;
+    width: 524px;
+    height: 46px;
+    left: 179px;
+    top: 60px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.text4-2 {
+    position: absolute;
+    width: 524px;
+    height: 46px;
+    left: 179px;
+    top: 60px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.calender {
+    width: 115px;
+    height: 21px;
+  position: absolute;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 690px;
+    padding-top: 50px;
+    color: #000000;
+}
+
+.calender2 {
+    width: 145px;
+    height: 41px;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 678px;
+    color: white;
+    background-color: #000000;
+    border-style: none;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+    padding-top: 5;
+    align-items: center;
+    justify-content: center;
+}
+
+.calender3 {
+    width: 115px;
+    height: 21px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 690px;
+    padding-top: 50px;
+    color: #000000;
+}
+
+.calender4 {
+    width: 115px;
+    height: 21px;
+
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: 690px;
+    padding-top: 50px;
+    color: #000000;
+}

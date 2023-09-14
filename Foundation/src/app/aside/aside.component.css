@@ -1,0 +1,23 @@
+.myAside {
+    background-color: #95deee;
+    width: 10%;
+    position: fixed;
+     left: 0;
+     bottom: 0;
+     top: 67.5px;
+    padding: 10px;
+    }
+    
+  .myAside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .myAside li {
+      padding: 30px;
+    }
+    
+    .myAside li:hover {
+      background-color: #ddd;
+    }

@@ -1,0 +1,39 @@
+2023-06-21 00:19:51,468 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2023-06-21 00:20:28,463 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:sandhya:0.0.1-SNAPSHOT @ C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\pom.xml.
+2023-06-21 00:20:30,297 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sandhya/src/main/java
+2023-06-21 00:20:30,301 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /sandhya/src/main/resources
+2023-06-21 00:20:30,302 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /sandhya/src/main/resources
+2023-06-21 00:20:30,304 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sandhya/src/test/java
+2023-06-21 00:20:30,830 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 4 sec
+2023-06-21 00:20:31,616 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-06-21 00:20:32,283 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:sandhya:0.0.1-SNAPSHOT @ C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\pom.xml.
+2023-06-21 00:20:33,365 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sandhya/src/main/java
+2023-06-21 00:20:33,367 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /sandhya/src/main/resources
+2023-06-21 00:20:33,368 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /sandhya/src/main/resources
+2023-06-21 00:20:33,371 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /sandhya/src/test/java
+2023-06-21 00:20:34,744 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 1.00 sec, update config takes 0.00 sec 
+2023-06-21 00:20:44,791 [Worker-6: Deferred Early Start] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://www.eclipse.org:443
+2023-06-21 00:33:36,237 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-21 00:34:28,459 [Worker-18: Launching MyAngularAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-21 00:34:28,509 [Worker-18: Launching MyAngularAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-21 00:34:28,514 [Worker-18: Launching MyAngularAppApplication] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-22 21:15:00,744 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-22 21:15:29,624 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-22 21:15:29,644 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-22 21:15:29,648 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-22 21:24:18,961 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-22 21:24:18,978 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-22 21:24:18,981 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-22 21:24:31,887 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-22 21:24:31,890 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-22 21:24:31,894 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-22 21:26:01,144 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-22 21:26:01,152 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-22 21:26:01,157 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-22 21:26:07,366 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-22 21:26:07,369 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-22 21:26:07,372 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources
+2023-06-23 04:57:51,037 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-23 04:58:21,349 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-23 04:58:21,402 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-23 04:58:21,413 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\jaswanth sai\UI AND API PROJECTS\Spring boot\sandhya\src\test\resources

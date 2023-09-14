@@ -1,0 +1,11 @@
+h2{
+    text-align: center;
+    color: aqua;
+    background-color: chocolate;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    width: 100%;
+}

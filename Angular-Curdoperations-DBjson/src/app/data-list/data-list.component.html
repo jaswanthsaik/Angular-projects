@@ -1,0 +1,86 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Date of Birth</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataList">
+      <td>{{ item.name }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.address }}</td>
+      <td>{{ item.phone }}</td>
+      <td>{{ item.dob }}</td>
+      <td>
+        <button (click)="editItem(item)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Edit form pop-up -->
+<!-- <div class="edit-form" *ngIf="editingItem">
+  <h2>Edit Item</h2>
+  <label for="edit-name">Name:</label>
+  <input type="text" id="edit-name" name="edit-name" [(ngModel)]="editedItem.name" required>
+
+  <label for="edit-email">Email:</label>
+  <input type="email" id="edit-email" name="edit-email" [(ngModel)]="editedItem.email" required>
+
+  <label for="edit-address">Address:</label>
+  <input type="text" id="edit-address" name="edit-address" [(ngModel)]="editedItem.address" required>
+
+  <label for="edit-phone">Phone Number:</label>
+  <input type="tel" id="edit-phone" name="edit-phone" [(ngModel)]="editedItem.phone" required>
+
+  <label for="edit-dob">Date of Birth:</label>
+  <input type="date" id="edit-dob" name="edit-dob" [(ngModel)]="editedItem.dob" required>
+
+  <button (click)="saveItem()">Update</button>
+  <button (click)="cancelEdit()">Cancel</button>
+</div> -->
+<form class="edit-form" *ngIf="editingItem" (submit)="saveItem()">
+
+  <h2>Edit Item</h2>
+
+  <label for="edit-name">Name:</label>
+
+  <input type="text" id="edit-name" name="edit-name" [(ngModel)]="editedItem.name" required>
+
+
+
+  <label for="edit-email">Email:</label>
+
+  <input type="email" id="edit-email" name="edit-email" [(ngModel)]="editedItem.email" required>
+
+
+
+  <label for="edit-address">Address:</label>
+
+  <input type="text" id="edit-address" name="edit-address" [(ngModel)]="editedItem.address" required>
+
+
+
+  <label for="edit-phone">Phone Number:</label>
+
+  <input type="tel" id="edit-phone" name="edit-phone" [(ngModel)]="editedItem.phone" required>
+
+
+
+  <label for="edit-dob">Date of Birth:</label>
+
+  <input type="date" id="edit-dob" name="edit-dob" [(ngModel)]="editedItem.dob" required>
+
+
+
+  <button type="submit">Update</button>
+
+  <button type="button" (click)="cancelEdit()">Cancel</button>
+
+</form>
