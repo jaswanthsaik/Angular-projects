@@ -1,0 +1,464 @@
+
+ACCOUNTS MANAGER:
+
+IN HTML FILE:
+
+
+ <mat-paginator 
+      [pageSizeOptions]="rowPerPageOptions"
+      [pageSize]="recordsPerPage"
+      [length]="totalRecords"
+      [pageIndex]="currentPage - 1" 
+      (page)="pageChange($event)">
+      (filterChange)="filter($event)"
+</mat-paginator>
+
+
+
+IN TS FILE:
+
+
+1: 	 paginationInfo = new PaginationInfo();
+  	selectedPage = 1;
+  	lastPage = 0;
+
+  	recordsPerPage = 10;
+  	currentPage: number = 1;
+  	totalPages: number = 1;
+  	startRecord = 0;
+  	endRecord = 0;
+  	totalRecords: number = 0;
+
+ 	 rowPerPageOptions = [10, 20, 50, 100];
+
+
+
+2:    @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+
+
+
+3: 	 pageChange(event: any): void {
+    this.currentPage = event.pageIndex + 1;
+    this.recordsPerPage = event.pageSize;
+    this.getAccounts();
+  }
+  changePageSize(): void {
+    this.accountsService.recordsPerPage = this.recordsPerPage;
+    this.currentPage = 1;
+    this.getAccounts();
+  }
+
+
+
+
+4:	 getAccounts(): void {
+    const options = new ApiRequestOptions();
+    options.pageNo = this.currentPage - 1;
+    options.limit = this.recordsPerPage;
+    options.filterText = this.filterText;
+    options.sortBy = this.sortField;
+    options.sortDirection = this.sortOrder;
+    const sub = this.httpService.getAccounts(options).subscribe(res => {
+      this.accounts = res.data;
+      this.dataSource.data = res.data;
+      this.dataSource.sort = this.sort;
+      this.totalPages = res.total_pages;
+      this.totalRecords = res.total_records;
+      this.startRecord = (this.currentPage - 1) * this.recordsPerPage + 1;
+      this.endRecord = (this.currentPage - 1) * this.recordsPerPage + this.accounts.length;
+      this.paginationInfo = { recordsPerPage: this.recordsPerPage,  
+        selectedPage: this.currentPage, totalPages: this.totalPages, totalRecords: this.totalRecords};
+      this.data = this.accounts.map(account => {
+        const row: AccountsTableRow = {
+          account: account.account,
+          name: account.account_name,
+          provider: account.provider_name,
+          date: new Date(account.created_in),
+          services: account.use_azure_lighthouse ? 'Lighthouse' : '',
+          tenants: account.total_tenant,
+          instances: account.total_instance,
+          recommendation: account.have_recommendation ? 'Yes' : 'No',
+          scheduled: account.total_instance_scheduled.toString(),
+          savings: 0,
+          selected: false,
+          resources: account.total_resource,
+          subscription: account.total_subscription
+        };
+        return row;
+      });
+      this.subs.add(sub);
+    });
+  }
+
+
+
+
+
+
+
+RESOURCES:
+
+IN HTML FILE:
+
+ <div class="resources-table-navigation">
+          <mat-paginator 
+          [pageSizeOptions]="rowPerPageOptions"
+          [pageSize]="recordsPerPage"
+          [length]="totalRecords"
+          [pageIndex]="currentPage - 1" 
+          (page)="pageChange($event)">
+  </mat-paginator>
+
+
+
+
+IN TS FILE:
+
+
+1: 	 paginationInfo = new PaginationInfo();
+  selectedPage = 1;
+  lastPage = 0;
+
+  recordsPerPage = 10;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  startRecord = 0;
+  endRecord = 0;
+  totalRecords: number = 0;
+
+  rowPerPageOptions = [10, 20, 50, 100];
+
+
+
+
+2: 	@ViewChild(MatPaginator) paginator!: MatPaginator;
+
+
+
+
+3: 	 getResources(): void {
+    const options = new ApiRequestOptions();
+    options.pageNo = this.currentPage - 1;
+    options.limit = this.recordsPerPage;
+    options.filterText = this.filterText;
+    options.sortBy = this.sortField;
+    options.sortDirection = this.sortOrder;
+    const sub = this.httpService.getResources(options).subscribe(res => {
+      this.data = res.data;
+      this.dataSource.data = res.data;
+      this.dataSource.sort = this.sort;
+      this.totalPages = res.total_pages;
+      this.totalRecords = res.total_records;
+      this.startRecord = (this.currentPage - 1) * this.recordsPerPage + 1;
+      this.endRecord = (this.currentPage - 1) * this.recordsPerPage + this.data.length;
+      this.paginationInfo = { recordsPerPage: this.recordsPerPage,  
+        selectedPage: this.currentPage, totalPages: this.totalPages, totalRecords: this.totalRecords};
+    });
+    this.subs.add(sub);
+  }
+
+
+
+
+4:	changePageSize(): void {
+    this.currentPage = 1;
+    this.getResources();
+  }
+  pageChange(event: any): void {
+        this.currentPage = event.pageIndex + 1;
+        this.recordsPerPage = event.pageSize;
+        this.getResources();
+      }
+
+
+
+
+LABELS MANAGER:
+
+IN HTML FILE:
+
+ <mat-paginator 
+        [pageSizeOptions]="rowPerPageOptions"
+        [pageSize]="recordsPerPage"
+        [length]="totalRecords"
+        [pageIndex]="currentPage - 1" 
+        (page)="pageChange($event)">
+</mat-paginator>
+
+
+
+IN TS FILE:
+
+
+1: 	 paginationInfo = new PaginationInfo();
+  selectedPage = 1;
+  lastPage = 0;
+
+  recordsPerPage = 10;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  startRecord = 0;
+  endRecord = 0;
+  totalRecords: number = 0;
+
+  rowPerPageOptions = [10, 20, 50, 100];
+
+
+
+
+2:   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+
+
+3:   getLabels(): void {
+    const options = new ApiRequestOptions();
+    options.pageNo = this.currentPage - 1;
+    options.limit = this.recordsPerPage;
+    options.filterText = this.filterText;
+    options.sortBy = this.sortField;
+    options.sortDirection = this.sortOrder;
+    const sub = this.httpService.getLabels(options).subscribe(res => {
+      this.labels = res.data;
+      this.dataSource.data = res.data;
+      this.dataSource.sort = this.sort;
+      this.totalPages = res.total_pages;
+      this.totalRecords = res.total_records;
+      this.startRecord = (this.currentPage - 1) * this.recordsPerPage + 1;
+      this.endRecord = (this.currentPage - 1) * this.recordsPerPage + this.labels.length;
+      this.paginationInfo = { recordsPerPage: this.recordsPerPage,  
+        selectedPage: this.currentPage, totalPages: this.totalPages, totalRecords: this.totalRecords};
+      this.data = this.labels.map(item => {
+        const row: LabelsTableRow = {
+          label: item.label,
+          labelName: item.label_name,
+          totalInstances: item.total_instance,
+          schedule: item.schedule_id,
+          scheduleName: item.schedule_name,
+          selected: false,
+        };
+        return row;
+      });
+    });
+    this.subs.add(sub);
+  }
+
+
+
+
+4:  changePageSize(): void {
+    this.labelsService.recordsPerPage = this.recordsPerPage;
+    this.currentPage = 1;
+    this.getLabels();
+  }
+
+pageChange(event: any): void {
+          this.currentPage = event.pageIndex + 1;
+          this.recordsPerPage = event.pageSize;
+          this.getLabels();
+        }
+
+
+
+
+
+SCHEDULES MANAGER:
+
+IN HTML FILE:
+
+<mat-paginator 
+        [pageSizeOptions]="rowPerPageOptions"
+        [pageSize]="recordsPerPage"
+        [length]="totalRecords"
+        [pageIndex]="currentPage - 1" 
+        (page)="pageChange($event)">
+</mat-paginator>
+
+
+
+
+IN TS FILE:
+
+1:  paginationInfo = new PaginationInfo();
+
+  recordsPerPage = 10;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  startRecord = 0;
+  endRecord = 0;
+  totalRecords: number = 0;
+
+  rowPerPageOptions = [3, 10, 20, 50, 100];
+
+
+
+
+2:   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+
+
+
+
+3:    getSchedules(): void {
+    const options = new ApiRequestOptions();
+    options.pageNo = this.currentPage - 1;
+    options.limit = this.recordsPerPage;
+    options.filterText = this.filterText;
+    options.sortBy = this.sortField;
+    options.sortDirection = this.sortOrder;
+    const sub = this.httpService.getSchedules(options).subscribe(res => {
+      this.schedules = res.data;
+      this.dataSource.data = res.data;
+      this.dataSource.sort = this.sort;
+      this.totalPages = res.total_pages;
+      this.totalRecords = res.total_records;
+      this.startRecord = (this.currentPage - 1) * this.recordsPerPage + 1;
+      this.endRecord = (this.currentPage - 1) * this.recordsPerPage + this.schedules.length;
+      this.paginationInfo = { recordsPerPage: this.recordsPerPage,  
+        selectedPage: this.currentPage, totalPages: this.totalPages, totalRecords: this.totalRecords};
+      this.data = this.schedules.map(item => {
+        const row: SchedulesTableRow = {
+          schedule: item.schedule,
+          schedule_name: item.schedule_name,
+          schedule_description: item.schedule_description,
+          timezone: item.timezone,
+          timezone_name: item.timezone_name,
+          schedule_saving: item.schedule_saving,
+          schedule_used: item.schedule_used,
+          selected: false,
+        };
+        return row;
+      });
+    });
+    this.subs.add(sub);
+  }
+
+
+
+
+
+4:	 pageChange(event: any): void {
+    this.currentPage = event.pageIndex + 1;
+    this.recordsPerPage = event.pageSize;
+    this.getSchedules();
+  }
+  
+
+  changePageSize(): void {
+    this.scheduleService.recordsPerPage = this.recordsPerPage;
+    this.currentPage = 1;
+    this.getSchedules();
+  }
+
+
+
+
+
+
+USER MANAGEMENT:
+
+IN HTML FILE: 
+
+
+ <mat-paginator 
+        [pageSizeOptions]="rowPerPageOptions"
+        [pageSize]="recordsPerPage"
+        [length]="totalRecords"
+        [pageIndex]="currentPage - 1" 
+        (page)="pageChange($event)">
+        (filterChange)="filter($event)"
+</mat-paginator>
+
+
+
+
+IN TS FILE: 
+
+1:  paginationInfo = new PaginationInfo(); 
+       pages: number[] = [1, 2];
+       showRandomPage = false;
+       selectedPage = 1;
+       lastPage = 5;
+
+       rowPerPageOptions = [10, 20, 50, 100];
+
+       subs = new Subscription();
+       filterText: string = "";
+       currentPage: number = 1;
+
+       recordsPerPage: number = 10;
+
+  	sortField: string = '';
+  	sortOrder: string = 'asc';
+  	totalPages: number = 1;
+  	startRecord = 0;
+  	endRecord = 0;
+  	totalRecords: number = 0;
+ 
+
+
+
+
+ 2:   @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+
+
+
+ 3:   pageChange(event: any): void {
+   	this.currentPage = event.pageIndex + 1;
+    	this.recordsPerPage = event.pageSize;
+  	this.getUsers().subscribe(usersData => {
+      	this.getUsersCallback(usersData);
+    	     })
+ 	      }
+changePageSize(): void {
+    this.userService.recordsPerPage = this.recordsPerPage;
+    this.currentPage = 1;
+    this.getUsers().subscribe(usersData => {
+      this.getUsersCallback(usersData);
+    })
+  }
+
+
+
+
+
+ 4:      private getUsers(): Observable<ApiResponse<User[]>> {
+    	const options = new ApiRequestOptions();
+
+    	options.pageNo = this.currentPage - 1;
+    	options.limit = this.recordsPerPage;
+
+    	options.filterText = this.filterText;
+    	options.sortBy = this.sortField;
+    	options.sortDirection = this.sortOrder;
+    	return this.userService.getUsers(options);
+  		}
+
+
+
+
+
+ 5:     private getUsersCallback(result: ApiResponse<User[]>) {
+
+    	this.totalPages = result.total_pages;
+    	this.totalRecords = result.total_records;
+   	 this.startRecord = (this.currentPage - 1) * 	this.recordsPerPage + 1;
+    	this.endRecord = (this.currentPage - 1) * this.recordsPerPage 	+ result.data.length;
+
+    	this.paginationInfo = {
+     	 recordsPerPage: this.recordsPerPage,
+      	selectedPage: this.currentPage, totalPages: this.totalPages, 	totalRecords: this.totalRecords
+   	 };
+
+    	this.data = result.data;
+    	this.dataSource.data = result.data;
+    	this.dataSource.sort = this.sort;
+
+    	this.getMyProfile();
+  	}
+
+
+
+
+
